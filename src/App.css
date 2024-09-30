@@ -1,0 +1,63 @@
+html{
+  background-color: #f4f7fa;
+  color: #333;
+}
+.app-container{
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center ;
+}
+.navbar{
+  background-color: #3498db;
+  padding: 10px 20px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 60px;
+}
+
+.navbar a{
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar a:hover{
+  color: #e0e0e0;
+}
+.clerk-user-button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}    
+.sign-in-container{
+  height: 100%;
+  width: 100%;
+  margin-top: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in-container .btn{
+  display: flex;
+}
+.btn button{
+  background-color: white;
+  color: black;
+  margin: 0 10px;
+  border: 2px solid black;
+  
+}
+.btn button:hover{
+  color: white;
+  background-color: black;
+}
