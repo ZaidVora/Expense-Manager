@@ -3,7 +3,8 @@ import { BrowserRouter as Router , Routes, Route, Link } from 'react-router-dom'
 import { Dashboard } from './pages/dashboard';
 import { FinancialRecordsProvider } from './contexts/financial-record-context';
 import { Auth } from './pages/auth';
-import { SignedIn, UserButton } from '@clerk/clerk-react';
+import { SignedIn, UserButton} from '@clerk/clerk-react';
+
 
 function App() {
   return <Router>
