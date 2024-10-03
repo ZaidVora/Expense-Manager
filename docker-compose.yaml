@@ -1,0 +1,41 @@
+version: "3"
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "4173:4173"
+    depends_on:
+      - server
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_API_URL=http://localhost:3001
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/financial-data
+
+  mongo:
+    image: mongo:6.0
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
